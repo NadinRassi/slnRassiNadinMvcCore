@@ -1,0 +1,64 @@
+﻿@model SistemaWebMisRecetas.Models.Receta
+
+@{
+    ViewData["Title"] = "Eliminar Receta";
+}
+
+@section SideBar {
+    <h3>Bienvenido!</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Continental_Breakfast.jpg/1024px-Continental_Breakfast.jpg" alt="desayuno-continental" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Paula_Modersohn-Becker_022.jpg/800px-Paula_Modersohn-Becker_022.jpg" alt="pintura-desayuno" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Breakfast_manitou2121.jpg/1024px-Breakfast_manitou2121.jpg" alt="desayuno-frutas" />
+}
+
+<h2>Receta: @Model.Titulo</h2>
+<p>¿Desea eliminar esta receta?</p>
+
+@using (Html.BeginForm("Eliminar", "Receta", FormMethod.Post))
+{
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Titulo)</span>
+        <span>@Html.DisplayFor(model => model.Titulo)</span>
+    </div>
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Categoria)</span>
+        <span>@Html.DisplayFor(model => model.Categoria)</span>
+    </div>
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Ingredientes)</span>
+        <span>@Html.DisplayFor(model => model.Ingredientes)</span>
+    </div>
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Instrucciones)</span>
+        <span>@Html.DisplayFor(model => model.Instrucciones)</span>
+    </div>
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Autor)</span>
+        <span>@Html.DisplayFor(model => model.Autor)</span>
+    </div>
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Apellido)</span>
+        <span>@Html.DisplayFor(model => model.Apellido)</span>
+    </div>
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Edad)</span>
+        <span>@Html.DisplayFor(model => model.Edad)</span>
+    </div>
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Email)</span>
+        <span>@Html.DisplayFor(model => model.Email)</span>
+    </div>
+
+    <input type="submit" action="Eliminar" />
+
+    @Html.ActionLink("Volver", "Index", "Receta")
+
+}
+

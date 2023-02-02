@@ -1,0 +1,68 @@
+﻿@model SistemaWebMisRecetas.Models.Receta
+
+@{
+    ViewData["Title"] = "Editar Receta";
+}
+
+@section SideBar {
+    <h3>Bienvenido!</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Continental_Breakfast.jpg/1024px-Continental_Breakfast.jpg" alt="desayuno-continental" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Paula_Modersohn-Becker_022.jpg/800px-Paula_Modersohn-Becker_022.jpg" alt="pintura-desayuno" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Breakfast_manitou2121.jpg/1024px-Breakfast_manitou2121.jpg" alt="desayuno-frutas" />
+}
+
+@using (Html.BeginForm("Editar", "Receta", FormMethod.Post))
+{
+    <p>
+        @Html.LabelFor(model => model.Titulo)
+        @Html.TextBoxFor(model => model.Titulo)
+        @Html.ValidationMessageFor(model => model.Titulo)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Categoria)
+        @Html.TextBoxFor(model => model.Categoria)
+        @Html.ValidationMessageFor(model => model.Categoria)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Ingredientes)
+        @Html.TextBoxFor(model => model.Ingredientes)
+        @Html.ValidationMessageFor(model => model.Ingredientes)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Instrucciones)
+        @Html.TextBoxFor(model => model.Instrucciones)
+        @Html.ValidationMessageFor(model => model.Instrucciones)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Autor)
+        @Html.TextBoxFor(model => model.Autor)
+        @Html.ValidationMessageFor(model => model.Autor)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Apellido)
+        @Html.TextBoxFor(model => model.Apellido)
+        @Html.ValidationMessageFor(model => model.Apellido)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Edad)
+        @Html.TextBoxFor(model => model.Edad)
+        @Html.ValidationMessageFor(model => model.Edad)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+    </p>
+
+    <input type="submit" action="Editar" />
+
+    @Html.ActionLink("Volver a ver recetas", "Index", "Receta")
+
+}

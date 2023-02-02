@@ -1,0 +1,70 @@
+﻿* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Calibri;
+}
+
+#header {
+    background-color: lightpink;
+    display: flex;
+    
+}
+
+#header h1, #header .nav {
+    border: 1px black solid;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+#center {
+    display: flex;
+}
+
+#content p {
+    margin: 4rem;
+}
+
+#sidebar {
+    background-color: deeppink;
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#sidebar img {
+    width: 200px;
+    height: auto;
+    margin: 1rem;
+}
+
+#index-recetas {
+    width: 64rem;
+    padding: 2rem;
+}
+
+#tabla-recetas {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+    #tabla-recetas th, #tabla-recetas td {
+        border: 1px solid black;
+       
+    }
+
+    #footer {
+        background-color: mediumvioletred;
+        height: 3rem;
+        font-size: 2em;
+        font-weight: bolder;
+        text-align: center;
+    }
